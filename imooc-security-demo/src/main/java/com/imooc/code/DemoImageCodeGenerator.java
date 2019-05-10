@@ -1,8 +1,7 @@
 package com.imooc.code;
 
-import com.imooc.security.core.validate.code.ImageCode;
+import com.imooc.security.core.validate.code.image.ImageCode;
 import com.imooc.security.core.validate.code.ValidateCodeGenerator;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 /**
@@ -11,7 +10,7 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @Version 1.0
  * @Software: IntelliJ IDEA
  */
-@Component(value = "imageCodeGenerator")
+//@Component(value = "imageCodeGenerator")
 public class DemoImageCodeGenerator implements ValidateCodeGenerator {
     @Override
     public ImageCode generate(ServletWebRequest request) {

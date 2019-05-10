@@ -124,7 +124,9 @@ public class UserController {
     public Object getCurrentUser(Authentication authentication){
         return authentication;
     }
-    public Object getCurrentUser(@AuthenticationPrincipal UserDetails userDetails){
+
+    @GetMapping("/me/details")
+    public Object getCurrentUserDetails(@AuthenticationPrincipal UserDetails userDetails){
         return userDetails;
     }
 
