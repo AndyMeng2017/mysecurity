@@ -17,7 +17,7 @@ import java.util.Random;
  * @Version 1.0
  * @Software: IntelliJ IDEA
  */
-@Component("smsCodeGenerator")
+@Component("smsValidateCodeGenerator")
 public class SmsCodeGenerator implements ValidateCodeGenerator {
 
     @Autowired
