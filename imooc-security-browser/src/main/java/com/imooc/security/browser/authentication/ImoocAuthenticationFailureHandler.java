@@ -18,7 +18,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@Component
+/**
+ * @author mhn
+ *
+ */
+@Component("imoocAuthenctiationFailureHandler")
 public class ImoocAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -28,6 +32,17 @@ public class ImoocAuthenticationFailureHandler extends SimpleUrlAuthenticationFa
     @Autowired
     private SecurityProperties securityProperties;
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @param exception
+     * @throws IOException
+     * @throws ServletException
+     * @see org.springframework.security.web.authentication.AuthenticationFailureHandler#onAuthenticationFailure
+     * (javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, org.springframework.security.core.AuthenticationException)
+     *
+     */
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         logger.info("登录失败");

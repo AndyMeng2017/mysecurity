@@ -36,4 +36,5 @@ public class ValidateCode {
     public void setExpireTime(LocalDateTime expireTime) {
         this.expireTime = expireTime;
     }
+
 }

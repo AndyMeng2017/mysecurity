@@ -1,5 +1,6 @@
 package com.imooc.security.core.validate.code.sms;
 
+import com.imooc.security.core.properties.SecurityConstants;
 import com.imooc.security.core.validate.code.ValidateCode;
 import com.imooc.security.core.validate.code.impl.AbstractValidateCodeProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @Version 1.0
  * @Software: IntelliJ IDEA
  */
-@Component("smsCodeProcessor")
+@Component("smsValidateCodeProcessor")
 public class SmsCodeProcessor extends AbstractValidateCodeProcessor<ValidateCode> {
 
     /**
@@ -26,7 +27,8 @@ public class SmsCodeProcessor extends AbstractValidateCodeProcessor<ValidateCode
     @Override
     protected void send(ServletWebRequest request, ValidateCode validateCode) throws Exception {
         // getRequiredStringParameter指明请求中必须包含这个参数
-        String mobile = ServletRequestUtils.getRequiredStringParameter(request.getRequest(), "mobile");
+        String paramName = SecurityConstants.DEFAULT_PARAMETER_NAME_MOBILE;
+        String mobile = ServletRequestUtils.getRequiredStringParameter(request.getRequest(), paramName);
         smsCodeSender.send(mobile, validateCode.getCode());
     }
 

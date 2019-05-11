@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
  * @Version 1.0
  * @Software: IntelliJ IDEA
  */
-@Component("imageCodeProcessor")
+@Component("imageValidateCodeProcessor")
 public class ImageCodeProcessor extends AbstractValidateCodeProcessor<ImageCode> {
 
     /**

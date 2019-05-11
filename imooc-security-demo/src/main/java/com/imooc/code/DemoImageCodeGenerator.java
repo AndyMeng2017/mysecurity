@@ -10,7 +10,7 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @Version 1.0
  * @Software: IntelliJ IDEA
  */
-//@Component(value = "imageCodeGenerator")
+//@Component(value = "imageValidateCodeGenerator")
 public class DemoImageCodeGenerator implements ValidateCodeGenerator {
     @Override
     public ImageCode generate(ServletWebRequest request) {
