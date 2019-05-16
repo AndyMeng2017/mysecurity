@@ -1,5 +1,6 @@
 package com.imooc.security.core.social.qq;
 
+import com.imooc.security.core.properties.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +26,9 @@ public class SocialConfig extends SocialConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
+    @Autowired
+    private SecurityProperties securityProperties;
+
     /**
      * 自动查找connectionFactory加载connection
      * @param connectionFactoryLocator
@@ -42,7 +46,9 @@ public class SocialConfig extends SocialConfigurerAdapter {
      * @return
      */
     @Bean
-    public SpringSocialConfigurer imoocSocialSecurityConfig() {
-        return new SpringSocialConfigurer();
+        public SpringSocialConfigurer imoocSocialSecurityConfig() {
+        String filterProcessesUrl = securityProperties.getSocial().getFilterProcessesUrl();
+        ImoocSpringSocialConfigurer configurer = new ImoocSpringSocialConfigurer(filterProcessesUrl);
+        return configurer;
     }
 }
