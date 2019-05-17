@@ -1,7 +1,9 @@
 package com.imooc.security.core.properties;
 
 public class BrowserProperties {
-    private String loginPage = "/imooc-signIn.html";
+    private String loginPage = SecurityConstants.DEFAULT_LOGIN_PAGE_URL;
+
+    private String signUpUrl = "/imooc-signUp.html";
 
     private LoginType loginType = LoginType.JSON;
 
@@ -29,5 +31,13 @@ public class BrowserProperties {
 
     public void setRemeberMeSeconds(int remeberMeSeconds) {
         this.remeberMeSeconds = remeberMeSeconds;
+    }
+
+    public String getSignUpUrl() {
+        return signUpUrl;
+    }
+
+    public void setSignUpUrl(String signUpUrl) {
+        this.signUpUrl = signUpUrl;
     }
 }

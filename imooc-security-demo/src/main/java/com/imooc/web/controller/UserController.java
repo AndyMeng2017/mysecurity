@@ -26,6 +26,12 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
+    @PostMapping("/regist")
+    public void regist(User user){
+        // 注册用户
+        System.out.println("注册用户");
+    }
+
     @GetMapping
     @JsonView(User.UserSimpleView.class)
     @ApiOperation(value = "用户查询服务")
@@ -129,6 +135,5 @@ public class UserController {
     public Object getCurrentUserDetails(@AuthenticationPrincipal UserDetails userDetails){
         return userDetails;
     }
-
 
 }

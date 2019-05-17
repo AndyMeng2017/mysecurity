@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.social.connect.ConnectionFactory;
 
 /**
+ * social一整套实现体系的配置入口
  * @Author: mhn
  * @Date: 2019/5/16 14:21
  * @Version 1.0

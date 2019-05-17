@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.imooc.security.core.social.qq.config.QQAutoConfig</OriginalElement>
+  <nodes>
+    <node x="341.15625" y="355.5">org.springframework.context.annotation.Configuration</node>
+    <node x="675.21875" y="527.5">com.imooc.security.core.social.qq.config.QQAutoConfig</node>
+    <node x="0.0" y="516.0">com.imooc.security.core.social.qq.SocialConfig</node>
+    <node x="218.625" y="0.0">org.springframework.social.config.annotation.SocialConfigurer</node>
+    <node x="218.625" y="149.0">org.springframework.social.config.annotation.SocialConfigurerAdapter</node>
+    <node x="1100.15625" y="298.0">org.springframework.boot.autoconfigure.condition.ConditionalOnProperty</node>
+    <node x="587.15625" y="344.0">org.springframework.boot.autoconfigure.social.SocialAutoConfigurerAdapter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.imooc.security.core.social.qq.config.QQAutoConfig" target="org.springframework.boot.autoconfigure.social.SocialAutoConfigurerAdapter">
+      <point x="0.0" y="-26.5" />
+      <point x="852.21875" y="491.0" />
+      <point x="833.65625" y="491.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="com.imooc.security.core.social.qq.config.QQAutoConfig" target="org.springframework.context.annotation.Configuration">
+      <point x="-118.0" y="-26.5" />
+      <point x="734.21875" y="491.0" />
+      <point x="449.15625" y="491.0" />
+      <point x="36.0" y="26.5" />
+    </edge>
+    <edge source="com.imooc.security.core.social.qq.SocialConfig" target="org.springframework.context.annotation.Configuration">
+      <point x="143.0" y="-38.0" />
+      <point x="429.0" y="491.0" />
+      <point x="377.15625" y="491.0" />
+      <point x="-36.0" y="26.5" />
+    </edge>
+    <edge source="com.imooc.security.core.social.qq.SocialConfig" target="org.springframework.social.config.annotation.SocialConfigurerAdapter">
+      <point x="-143.0" y="-38.0" />
+      <point x="143.0" y="491.0" />
+      <point x="294.125" y="491.0" />
+      <point x="294.125" y="273.0" />
+      <point x="361.625" y="273.0" />
+      <point x="-143.0" y="49.5" />
+    </edge>
+    <edge source="org.springframework.social.config.annotation.SocialConfigurerAdapter" target="org.springframework.social.config.annotation.SocialConfigurer">
+      <point x="2.8421709430404007E-14" y="-49.5" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="org.springframework.boot.autoconfigure.social.SocialAutoConfigurerAdapter" target="org.springframework.social.config.annotation.SocialConfigurerAdapter">
+      <point x="0.0" y="-38.0" />
+      <point x="833.65625" y="273.0" />
+      <point x="647.625" y="273.0" />
+      <point x="143.00000000000003" y="49.5" />
+    </edge>
+    <edge source="com.imooc.security.core.social.qq.config.QQAutoConfig" target="org.springframework.boot.autoconfigure.condition.ConditionalOnProperty">
+      <point x="118.0" y="-26.5" />
+      <point x="970.21875" y="491.0" />
+      <point x="1208.15625" y="491.0" />
+      <point x="0.0" y="84.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8999999999999996" x="688.4444444444448" y="339.8888888888891" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
