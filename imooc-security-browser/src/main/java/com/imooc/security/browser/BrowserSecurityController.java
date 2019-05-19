@@ -69,16 +69,4 @@ public class BrowserSecurityController {
         userInfo.setHeadimg(connection.getImageUrl());
         return userInfo;
     }
-
-    public static void main(String[] args) {
-        String aa = "woshi[(ss),(sss)];mhn[(fd),(fsf)];";
-
-        String regex = "\\[\\(.*\\),\\(.*\\)\\];";
-
-        String[] strs = aa.split(regex);
-        for(int i = 0; i < strs.length; i++) {
-            System.out.printf("strs[%d] = %s%n", i, strs[i]);
-        }
-
-    }
 }
